@@ -1,32 +1,57 @@
 # Odooku
 
-> Odoo en la plataforma Heroku
+Odooku provides a great way to run Odoo as a service,
+deploy your codebase, migrate your data and more.
+[View documentation](https://odooku.github.io/odooku/)
 
-```sh
-HEROKU_PROJECT="erste-staging"
+## Python packages
 
-# Crear proyecto en Heroku
-heroku create $HEROKU_PROJECT
+### odooku
+[![Build Status](https://travis-ci.org/odooku/odooku.svg?branch=10.0)](https://travis-ci.org/odooku/odooku)
 
-# Agregar buildpacks
-heroku buildpacks:add https://github.com/adaptivdesign/odooku-buildpack.git#10.0 --index 1 --app $HEROKU_PROJECT
-heroku buildpacks:add https://github.com/SectorLabs/heroku-buildpack-git-submodule.git --index 2 --app $HEROKU_PROJECT
+Wrapper package around Odoo that patches and extends Odoo to work in a service oriented environment.
 
-# Configurar variables de entorno
-heroku --app $HEROKU_PROJECT config:set GIT_REPO_URL=git@github.com:Prescrypto/odooku
-heroku --app $HEROKU_PROJECT config:set GIT_SSH_KEY="<id_rsa>"
-heroku --app $HEROKU_PROJECT config:set AWS_ACCESS_KEY_ID=<key_de_aws>
-heroku --app $HEROKU_PROJECT config:set AWS_SECRET_ACCESS_KEY=<secreto_de_aws>
-heroku --app $HEROKU_PROJECT config:set AWS_REGION=<region_de_aws>
-heroku --app $HEROKU_PROJECT config:set S3_BUCKET=<bucket_de_s3>
+- Strips out threading in favor of Gevent
+- Single process wsgi server and/or cron runner
+- S3 based filestore
+- Redis sessions for multi server deployments
+- Websockets for persistent connections and awesome performance
+- Comprehensive suite of management commands
+- CDN support, serve all static files directly through S3
+- Packaged addons
 
+[View Github](https://github.com/odooku/odooku)
 
-# agregar addons requeridos
-$ heroku addons:create heroku-postgresql:hobby-basic
-$ heroku addons:create heroku-redis:hobby-dev
+### odooku-odoo
+[![Build Status](https://travis-ci.org/odooku/odooku-odoo.svg?branch=10.0)](https://travis-ci.org/odooku/odooku-odoo)
 
-# deploy
-git push heroku master
-```
+Pypi packaged Odoo providing an easy and reliable install method for Odoo.
 
-# add rest api module
+[View Github](https://github.com/odooku/odooku-odoo)
+
+### odooku-data
+
+Data serialization and deserialization library for migrations (docs comming soon).
+
+[View Github](https://github.com/odooku/odooku-data)
+
+## Heroku deployment
+
+### odooku-heroku-buildpack
+[![Build Status](https://travis-ci.org/odooku/odooku-heroku-buildpack.svg?branch=10.0)](https://travis-ci.org/odooku/odooku-heroku-buildpack)
+
+Heroku buildpack for Odooku.
+
+[View Github](https://github.com/odooku/odooku-heroku-buildpack)
+
+### odooku-heroku-starter
+
+Template project for Heroku.
+
+[View Github](https://github.com/odooku/odooku-heroku-starter)
+
+## Snap deployment
+
+### odooku-snap
+
+[View Github](https://github.com/odooku/odooku-snap)
