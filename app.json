@@ -9,10 +9,7 @@
   ],
   "buildpacks": [
     {
-      "url": "https://github.com/Prescrypto/odooku-buildpack.git#submodules-fetch"
-    },
-    {
-      "url": "https://github.com/SectorLabs/heroku-buildpack-git-submodule.git"
+      "url": "https://github.com/odooku/odooku-buildpack.git#10.0"
     }
   ],
   "addons": [
@@ -39,6 +36,10 @@
     },
     "GIT_REPO_URL": {
       "description": "Git SSH url to fetch submodules",
+      "value": ""
+    },
+   "ODOOKU_ADDONS": {
+      "description": "odooku addons",
       "value": ""
     },
     "GIT_SSH_KEY": {
