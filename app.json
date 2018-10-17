@@ -9,11 +9,9 @@
   ],
   "buildpacks": [
     {
-      "url": "https://github.com/Prescrypto/odooku-buildpack.git#submodules-fetch"
-    },
-    {
-      "url": "https://github.com/SectorLabs/heroku-buildpack-git-submodule.git"
+      "url": "https://github.com/odooku/odooku-buildpack.git#10.0"
     }
+
   ],
   "addons": [
     "heroku-postgresql:hobby-basic",
