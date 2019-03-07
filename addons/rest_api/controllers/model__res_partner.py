@@ -54,7 +54,7 @@ OUT__res_partner__read_all__JSON = (                # editable
     'group_code',
     'account_number',
     'last_contract',
-
+    'comment',
 
 )
 #           ]
@@ -90,6 +90,7 @@ OUT__res_partner__read_one__JSON = (                # editable
     'outstanding',
     'group_code',
     'account_number',
+    'comment',
     ('last_contract', (
         'id',
         'name',
