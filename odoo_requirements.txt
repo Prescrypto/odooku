@@ -12,7 +12,6 @@ Mako==1.0.4
 MarkupSafe==0.23
 mock==2.0.0
 beautifulsoup4==4.9.3
-curtsies>=0.1.18
 ofxparse==0.15
 passlib==1.6.5
 Pillow==3.4.1
