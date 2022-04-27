@@ -41,4 +41,3 @@ xlrd==1.0.0
 ofxparse
 six 
 nose 
-coverage
