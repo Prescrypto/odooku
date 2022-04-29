@@ -32,3 +32,7 @@ git push heroku master
 # add rest api module
 
 # really> 1
+
+
+# clen cache build
+heroku builds:cache:purge --app erste-heroku-18-2
