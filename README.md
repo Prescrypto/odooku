@@ -31,7 +31,7 @@ git push heroku master
 
 # add rest api module
 
-# really> 1234567
+# really> 12345678
 
 
 # clen cache build
