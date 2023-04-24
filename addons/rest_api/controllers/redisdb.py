@@ -5,6 +5,8 @@ try:
     import simplejson as json
 except ImportError:
     import json
+import os
+import ast
 
 _logger = logging.getLogger(__name__)
 
@@ -12,7 +14,9 @@ _logger = logging.getLogger(__name__)
 class RedisTokenStore(object):
     
     def __init__(self, host='localhost', port=6379, db=0, password=None):
-        self.rs = redis.StrictRedis(host=host, port=port, db=db, password=password)
+        #Hotfix for paid redis 6.2 or major on heroku redis instance
+        REDIS_SSL = ast.literal_eval(os.getenv("REDIS_SSL", "False"))
+        self.rs = redis.StrictRedis(host=host, port=port, db=db, password=password, ssl=REDIS_SSL, ssl_cert_reqs=None)
         # Connection test
         try:
             res = self.rs.get('foo')

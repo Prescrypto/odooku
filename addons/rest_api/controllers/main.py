@@ -492,7 +492,10 @@ else:
         refresh_token_expires_in = res and int(res[0])
         # ... of Redis server
         try:
-            _redis_uri = os.environ["REDIS_URL"]
+            if os.getenv("REDIS_TLS_URL", False):
+                _redis_uri = os.environ["REDIS_TLS_URL"]
+            else:
+                _redis_uri = os.environ["REDIS_URL"]    
         except:
             _redis_uri = False
 
