@@ -1,4 +1,4 @@
-git+https://github.com/vezino/odooku-compat.git@10.1
+git+https://github.com/vezino/odooku-compat.git@11.0
 # beautifulsoup4==4.9.3
 # Babel==2.3.4
 # decorator==4.0.10
