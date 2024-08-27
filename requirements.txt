@@ -6,7 +6,8 @@ docutils==0.16
 ebaysdk==2.1.5
 feedparser==6.0.8
 #gevent==21.12.0
-gevent>=1.1.2,<22.0.0
+#gevent>=1.1.2,<22.0.0
+gevent
 greenlet==1.1.2
 #jcconv==0.2.3
 Jinja2==2.11.3
