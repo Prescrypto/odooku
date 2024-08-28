@@ -25,7 +25,9 @@ Pillow==8.3.1
 psutil
 #psycogreen==1.0.2
 #psycogreen>=1.0,<1.1
-psycogreen
+#psycogreen
+git+https://github.com/psycopg/psycogreen.git
+
 psycopg2-binary==2.9.1
 pydot==1.4.2
 pyparsing==2.4.7
