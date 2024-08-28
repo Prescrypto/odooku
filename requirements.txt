@@ -21,9 +21,11 @@ mock==4.0.3
 git+https://github.com/jseutter/ofxparse.git
 passlib==1.7.4
 Pillow==8.3.1
-psutil==5.8.0
+#psutil==5.8.0
+psutil
 #psycogreen==1.0.2
-psycogreen>=1.0,<1.1
+#psycogreen>=1.0,<1.1
+psycogreen
 psycopg2-binary==2.9.1
 pydot==1.4.2
 pyparsing==2.4.7
