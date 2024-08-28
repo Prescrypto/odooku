@@ -17,7 +17,8 @@ Mako==1.1.5
 MarkupSafe==1.1.1
 mock==4.0.3
 #ofxparse==0.20
-ofxparse==0.19
+#ofxparse==0.19
+git+https://github.com/jseutter/ofxparse.git
 passlib==1.7.4
 Pillow==8.3.1
 psutil==5.8.0
