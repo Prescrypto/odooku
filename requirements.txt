@@ -31,7 +31,7 @@ psycopg2-binary==2.9.1
 pydot==1.4.2
 pyparsing==2.4.7
 #pyPdf==1.13
-PyPDF2==3.13.0
+PyPDF2==3.0.1
 pyserial==3.5
 Python-Chart==1.39
 python-dateutil==2.8.2
